@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  //Shop
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.blue,    
+       primarySwatch: Colors.indigo
       ),
       home: Home(),
     );
