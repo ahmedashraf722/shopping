@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/widgets/app_drawer.dart';
 
 class ProductOverviewScreen extends StatefulWidget {
   @override
@@ -15,6 +16,7 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
       body: Container(
         color: Colors.lime,
       ),
+      drawer: AppDrawer(),
     );
   }
 }
