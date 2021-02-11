@@ -50,7 +50,7 @@ class Products with ChangeNotifier {
     notifyListeners();
   }
 
-  List<Product> get item {
+  List<Product> get items {
     return [..._items];
   }
 
