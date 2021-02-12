@@ -23,19 +23,23 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
 
   @override
   void initState() {
+    super.initState();
     _isLoading = true;
     Provider.of<Products>(context, listen: false)
         .fetchAndSetProducts()
         .then((_) => setState(
               () => _isLoading = false,
             ))
-        .catchError((error) => print(error));
-    super.initState();
+        .catchError((_) => setState(
+              () => _isLoading = false,
+            ));
   }
 
   @override
   Widget build(BuildContext context) {
+    var _key = GlobalKey<ScaffoldState>();
     return Scaffold(
+      key: _key,
       appBar: AppBar(
         title: Text('My Shop'),
         actions: [
