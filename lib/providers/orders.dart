@@ -24,8 +24,8 @@ class Orders with ChangeNotifier {
   String authToken;
   String userId;
 
-  getData(String authToken, String uId, List<OrderItem> orders) {
-    authToken = authToken;
+  getData(String authTok, String uId, List<OrderItem> orders) {
+    authToken = authTok;
     userId = uId;
     _orders = orders;
     notifyListeners();

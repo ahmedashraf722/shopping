@@ -6,7 +6,7 @@ import 'package:shop/providers/product.dart';
 
 class Products with ChangeNotifier {
   List<Product> _items = [
-    Product(
+    /*Product(
       id: 'p1',
       title: 'Red Shirt',
       description: 'A red shirt - it is pretty red!',
@@ -35,16 +35,15 @@ class Products with ChangeNotifier {
       title: 'A Pan',
       description: 'Prepare any meal you want.',
       price: 49.99,
-      imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
-    ),
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
+    ),*/
   ];
 
   String authToken;
   String userId;
 
-  getData(String authToken, String uId, List<Product> products) {
-    authToken = authToken;
+  getData(String authTok, String uId, List<Product> products) {
+    authToken = authTok;
     userId = uId;
     _items = products;
     notifyListeners();
@@ -97,7 +96,7 @@ class Products with ChangeNotifier {
       _items = loadedProducts;
       notifyListeners();
     } catch (e) {
-      print(e);
+      throw e;
     }
   }
 
