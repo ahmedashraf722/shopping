@@ -16,6 +16,7 @@ class OrderItemI extends StatelessWidget {
         subtitle: Text(DateFormat('dd/MM/yyyy hh:mm').format(order.dateTime)),
         children: order.products
             .map((prod) => Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       prod.title,
@@ -25,7 +26,7 @@ class OrderItemI extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '${prod.quantity}x \$ ${prod.price}',
+                      '${prod.quantity}x   \$${prod.price}',
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.grey,
