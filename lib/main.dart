@@ -13,6 +13,7 @@ import 'package:shop/screens/product_details_screen.dart';
 import 'package:shop/screens/product_overview_screen.dart';
 import 'package:shop/screens/splash_screen.dart';
 import 'package:shop/screens/user_products_screen.dart';
+
 //GGGG
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
